@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="ui container">
+    <div class="ui segment">
+        <div class="ui {{result}} message">
+            <div class="header">{{result_header}}</div>
+        </div>
+    </div>
+    <div class="ui segment">
+        <div class="ui message">
+            <p>{{result_content}}</p>
+        </div>
+    </div>
+</div>
+{% end %}
