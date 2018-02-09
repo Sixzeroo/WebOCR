@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block jscontent %}
+
+{% end %}
+
+{% block content %}
+<div class="ui container">
+    <div class="ui segment">
+        <form class="ui form" action='./2/upload' enctype="multipart/form-data" method='post'>
+            <div class="field">
+                <label>选择图片文件</label>
+                <input type='file' name='file' />
+            </div>
+            <button class="ui button" type="submit">确认提交</button>
+        </form>
+    </div>
+
+</div>
+{% end %}

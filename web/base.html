@@ -1,19 +1,29 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>HFUT Cloud Print</title>
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <title>WebOCR</title>
         <link rel="stylesheet" href="{{ static_url("css/semantic.min.css") }}" type="text/css" media="all" />
     </head>
+
+    <script src="{{ static_url("js/jquery.min.js") }}"></script>
+    <script src="{{ static_url("js/semantic.min.js") }}"></script>
+    <script src="{{ static_url("js/paste.js") }}"></script>
+    {% block jscontent %}{% end %}
     <body style="background-color: #CCC4C2">
     <div class="ui white massive main menu">
         <div class="ui container">
-            <a href="/" class="header item">
+            <a href="../1" class="header item">
                 WebORC
+            </a>
+            <a href='../1' class="header item">
+                粘贴模式
+            </a>
+            <a href='../2' class="header item">
+                文件模式
             </a>
         </div>
     </div>
     {% block content %}{% end %}
-    <script src="{{ static_url("js/jquery.min.js") }}"></script>
-    <script src="{{ static_url("js/semantic.min.js") }}"></script>
     </body>
 </html>

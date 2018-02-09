@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block jscontent %}
+<script src="{{ static_url("js/work.js") }}"></script>
+{% end %}
+
+{% block content %}
+<div class="ui container">
+  <div class="ui segment demo demo-contenteditable" id="tar" contenteditable>粘贴在这里</div>
+</div>
+{% end %}

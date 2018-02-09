@@ -42,7 +42,7 @@ class OCR(object):
             output['code'] = 1
             text = ''
             for elem in res['words_result']:
-                text = text + elem['words']
+                text = text + elem['words'] + '\n'
             output['text'] = text
 
         return output
