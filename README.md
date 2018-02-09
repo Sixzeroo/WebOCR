@@ -11,6 +11,7 @@ web在线OCR（图片文字识别）
 * 选择文件上传图片
 * 粘贴板直接上传图片
 
+
 ## 配置
 ```
 # 上传路径和静态文件配置路径，一般不需要改变
@@ -44,3 +45,10 @@ git clone https://github.com/Sixzeroo/WebOCR
 ```
 docker-compose up -d
 ```
+
+## 演示地址
+http://server.liuin.cn:8080/1
+
+## 参考
+* https://github.com/layerssss/paste.js
+* https://github.com/MaticsL/HFUT_cloud_print
