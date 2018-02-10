@@ -1,13 +1,10 @@
-    function addDiv(res) {
-        $('<div class="ui segment">' +res+ '</div>').insertAfter($('#tar'));
-    }
 
     $(function(){
       $('.demo-contenteditable').pastableContenteditable();
       $('.demo').on('pasteImage', function(ev, data){
         var blobUrl = URL.createObjectURL(data.blob);
         var name = data.name != null ? ', name: ' + data.name : '';
-        console.log(data);
+        // console.log(data);
         var res = 'zero';
         var url = window.location.href + '/upload';
         $.ajax({
@@ -18,16 +15,18 @@
                     'data': data.dataURL
                 },
             success: function (response) {
-                console.log(response);
+                // console.log(response);
                 res = response.message;
-                addDiv(res);
-                addDiv("结果：")
+                $('#message').text( "图片上传成功，转换结果：");
+                $('#result').text(res);
+                $('#btn').attr("data-clipboard-text",res);
             },
             error: function(responsestr){
-                console.log("error");
-                console.log(responsestr);
+                // console.log("error");
+                // console.log(responsestr);
+                $('#message').text( "上传失败，请重试！");
             }
         });
-        $('<div class="ui segment">' + data.width + ' x ' + data.height + '图片正在上传' + '</div>').insertAfter(this);
+        $('#message').text( '图片正在上传,尺寸：' + data.width + ' x ' + data.height);
       })
     });

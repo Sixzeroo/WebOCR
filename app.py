@@ -111,14 +111,11 @@ class UploadFile1Handler(tornado.web.RequestHandler):
 
 
 application = tornado.web.Application([
-<<<<<<< 113025b2a68813aba10f9e763f79ffb7909b8693
     (r"/", tornado.web.RedirectHandler,{"url":"/1","permanent":False}),
     (r"/1", Main1Handler),
     (r"/2", Main2Handler),
     (r"/1/upload", UploadFile1Handler),
     (r"/2/upload", UploadFile2Handler)],
-=======
->>>>>>> [feature]粘贴上传，,前端部分
     static_path=static_path)
 
 if __name__ == "__main__":

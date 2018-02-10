@@ -8,6 +8,7 @@
 
     <script src="{{ static_url("js/jquery.min.js") }}"></script>
     <script src="{{ static_url("js/semantic.min.js") }}"></script>
+    <script src="{{ static_url("js/clipboard.min.js") }}"></script>
     <script src="{{ static_url("js/paste.js") }}"></script>
     {% block jscontent %}{% end %}
     <body style="background-color: #CCC4C2">
@@ -26,5 +27,6 @@
         </div>
     </div>
     {% block content %}{% end %}
+    {% block endjscontent %}{% end %}
     </body>
 </html>

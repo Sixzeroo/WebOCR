@@ -6,6 +6,26 @@
 
 {% block content %}
 <div class="ui container">
-  <div class="ui segment demo demo-contenteditable" id="tar" contenteditable>粘贴在这里</div>
+  <div class="ui segment demo demo-contenteditable" id="pastehere" contenteditable>粘贴在这里</div>
+  <div class="ui header" id="message">结果：</div>
+  <div class="ui segment" id="result">结果展示在这里</div>
+  <div class="ui segment">
+        <button id="btn" class="ui button" data-clipboard-text="暂无内容">
+            复制到剪贴板
+        </button>
+    </div>
 </div>
+{% end %}
+
+{% block endjscontent %}
+<script >
+    var btn = document.getElementById('btn');
+    var clipboard = new Clipboard(btn);
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+</script>
 {% end %}
